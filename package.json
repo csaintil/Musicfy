@@ -1,0 +1,17 @@
+{
+  "name": "beer_list",
+  "version": "1.0.0",
+  "description": "![beer](http://i.imgur.com/EDTZyFL.jpg)",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "mustache-express": "^1.2.4",
+    "pg-promise": "^5.9.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
