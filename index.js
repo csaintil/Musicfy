@@ -18,25 +18,7 @@ app.use(express.static(__dirname + '/public'));
 
 app.listen(port, () => { console.log("Server started on " + port); });
 
-// get the database
-const db = require('./models/setup.js');
-
-// Here's just a test to see if the db is working:
-db.query("SELECT * FROM beers")
-    .then((data) => {
-        console.log("test query:", data);
-    });
-
 // get the beers router (the export of the beers controller file)
 const beersRouter = require('./controllers/beers.js');
 // hook it up to the app
 app.use('/beers', beersRouter);
-
-// maybe this shouldn't be here
-app.get("/", function(req, res) {
-    res.send("i don't know what I should even do");
-});
-
-// set up an api route for get "/beers'
-
-// set up an api route for get "/beers/:id"
