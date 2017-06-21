@@ -20,7 +20,3 @@
 
     psql -d beer_list
     SELECT * FROM beers;
-
-### Part 1
-
-...
