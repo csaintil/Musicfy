@@ -4,9 +4,10 @@
   "description": "![beer](http://i.imgur.com/EDTZyFL.jpg)",
   "main": "app.js",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.14.0",
     "mustache-express": "^1.2.4",
-    "pg-promise": "^5.9.4"
+    "pg-promise": "^5.9.7"
   },
   "devDependencies": {},
   "scripts": {
