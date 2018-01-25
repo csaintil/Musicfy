@@ -36,3 +36,7 @@ Open the `express_auth_passport_bcrpt` project we presented this morning.
 1. Copy and paste the `views/users` directory from `express_auth_passport_bcrypt` into this project's `views` directory.
 
 1. Modify `index.js` to connect the pieces, using `index.js` in `express_auth_passport_bcrypt` as a guide. If successful, you should be able to navigate to `users/new` and create a new user.
+
+### If Something Goes Wrong Or You Find A Bug In The Starter Code
+
+Let me know.
