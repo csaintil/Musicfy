@@ -1,12 +1,17 @@
 {
-  "name": "beer_list",
+  "name": "auth_beer_list_lab",
   "version": "1.0.0",
   "description": "![beer](http://i.imgur.com/EDTZyFL.jpg)",
   "main": "app.js",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
+    "express-session": "^1.15.6",
     "mustache-express": "^1.2.4",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
     "pg-promise": "^5.9.7"
   },
   "devDependencies": {},
