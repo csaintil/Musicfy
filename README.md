@@ -19,6 +19,7 @@
 1. Check that your table was created and populated:
 
 `psql -d auth_beer_list_lab`
+
 `SELECT * FROM beers;`
 
 ### Part 1
