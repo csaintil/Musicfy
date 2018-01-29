@@ -5,7 +5,7 @@ const pgp = require('pg-promise')();
 const cn = {
     host: 'localhost',
     port: 5432,
-    database: 'auth_beer_list_lab'
+    database: 'musicfy'
 };
 
 const db = pgp(cn);

@@ -1,14 +1,16 @@
 {
-  "name": "auth_beer_list_lab",
+  "name": "musicfy",
   "version": "1.0.0",
   "description": "![beer](http://i.imgur.com/EDTZyFL.jpg)",
   "main": "app.js",
   "dependencies": {
+    "axios": "^0.17.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.2",
     "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
     "express-session": "^1.15.6",
+    "morgan": "^1.9.0",
     "mustache-express": "^1.2.4",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
