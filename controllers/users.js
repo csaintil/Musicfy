@@ -2,6 +2,7 @@ const User = require('../models/user');
 const router = require('express').Router();
 const passport = require('passport');
 const artists = require('../models/artists.js');
+const tracks = require("../models/tracks.js");
 
 // const controller = require('./controller');
 const auth = require('../services/auth');
@@ -81,6 +82,18 @@ router.get(
         res.render('users/profile', { user: res.locals.userData });
     }
 );
+
+router.post(
+    '/songs', 
+    auth.restrict,
+   User.findByEmailMiddleware,
+   tracks.create,
+   (req, res) => {
+    console.log(res.locals.trackData);
+    res.render("artists/songs", { trackData: res.locals.trackData })
+   }
+)
+
 
 router.post(
     '/counter',

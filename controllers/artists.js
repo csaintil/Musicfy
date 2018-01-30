@@ -7,13 +7,19 @@ const auth = require('../services/auth');
 
 
 router.get('/viewArtist',auth.restrict, artists.all, (req,res) => {
-  console.log('here');
+  // console.log('here');
   // console.log(res.locals.searchData);
   res.render('./users/profile',  res.locals.searchData);
 });
 
 
 
+
+router.get('/songs',auth.restrict, artists.all, (req,res) => {
+  console.log('here');
+  // console.log(res.locals.searchData);
+  res.render('./artists/songs',  res.locals.searchData);
+});
 
 
 

@@ -85,3 +85,7 @@ ul li span.price {
   display: block;
   margin: 20pt auto;
 }
+
+.container {
+    display: inline-flex;
+}

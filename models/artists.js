@@ -4,6 +4,8 @@ const axios = require("axios");
 
 const artists = {};
 
+
+
 artists.all = (req, res, next) => {
   // const input = req.query.term;
   

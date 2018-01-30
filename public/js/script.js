@@ -14,17 +14,20 @@ $(document).ready(function() {
       });
     });
 
+
+
 $('#createTrack').submit(function(e){
     // preventing form from submitting
     e.preventDefault();
     // grabbing form data
     const data = $(this).serialize();    
     $.ajax({
-      url: "/tracks/track",
+      // console.log('im in the ajax');
+      url: "/users/songs",
       data: data,
       type: 'POST',
       success: function(data) {
-        console.log('response ', data)
+        console.log('response  ', data + "+++++++++++++++++++++++++++++++++++++++++++++++");
         // redirecting to the users's show page on success
         // window.location.href = `/users/${data.id}`;
       }, 
@@ -35,5 +38,25 @@ $('#createTrack').submit(function(e){
     })
 
   })
+
+
+ //  $('#delete').click(function() {
+ //  const id = $('track-id').val();
+ //    console.log("heloo " + '+++++++++++++++++++++++++++++++++++')
+ // // return(alert);
+
+ //  const confirm = window.confirm('Are you sure you want to delete this?');
+ // if(confirm) {
+ //     $.ajax({
+ //      url: "/users/saveSongs",
+ //      method:"DELETE",
+ //      success:function(data) {
+ //        console.log('delete', data);
+
+ //      }
+ //    })
+ //  }
+
+ //  })
 
 });

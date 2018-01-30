@@ -14,7 +14,10 @@
 
     <main>
         <section>
-        <a href="../tracks/track">create</a>
+        <a href="../users/track">create</a>
+        <a href="../users/saveSongs">edit/delete</a>
+
+
 
             Welcome to your profile, {{user.email}}
             <div>
@@ -32,16 +35,20 @@
 
 
 
-
-
+  <div class="result">
+    <p>
              {{#results}}
-                <div>
-                    <a href="">{{trackName}}</a>
-                    <p>
-                    </p>
-                </div>
+                    
+                     {{trackName}}    {{artistName}}
+                    {{country}}
+                    {{primaryGenreName}}
+                     {{price}}
+                    <img src="{{artworkUrl100}}" alt="">
+                   
+               
                 {{/results}}
-
+            </p>
+ </div>
 
 
 </body>

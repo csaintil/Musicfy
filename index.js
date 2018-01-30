@@ -61,7 +61,7 @@ app.use('/users', require('./controllers/users'));
 // app.use('/artists', require('./controllers/artists'));
 app.use('/users', require('./controllers/artists'));
 
-app.use('/tracks', require('./controllers/tracks.js'));
+app.use('/users', require('./controllers/tracks.js'));
 
 
 app.get('/', (req, res) => {
