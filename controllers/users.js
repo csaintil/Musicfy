@@ -90,10 +90,32 @@ router.post(
    tracks.create,
    (req, res) => {
     console.log(res.locals.trackData);
-    res.render("artists/songs", { trackData: res.locals.trackData })
+   res.json({ id:  res.locals.trackData.id })
+    // res.render("artists/songs", { trackData: res.locals.trackData })
    }
 )
 
+
+router.put(
+    '/track/{{id}}/edit', 
+    auth.restrict,
+   // User.findByEmailMiddleware,
+   tracks.update,
+   (req, res) => {
+    console.log(res.locals.trackData + "+++++++++++++++++++");
+   res.send( {id: res.locals.upToDateTrackData});
+   }
+)
+
+router.delete(
+    '/track/{{id}}', 
+    auth.restrict,
+   User.findByEmailMiddleware,
+   tracks.destroy,
+   (req, res) => {
+    res.json({})
+   }
+)
 
 router.post(
     '/counter',

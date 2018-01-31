@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title></title>
+
+  <link rel="stylesheet" href="">
+    <script src="/js/jquery.js"></script>
+    <script src="/js/script.js"></script>
+</head>
+<body>
+<div>
+  
+               <p> Artist: {{artistname}}<p>
+               <p> Track :{{trackname}}</p>
+               <p> Country: {{country}}</p>
+              <p> Genre:{{primarygenrename}}</p>
+              <p> Price: {{price}}</p>
+              
+     <a class="home-link" href="{{id}}/edit"><button>Edit</button></a>
+          <button id="delete">Delete</button>
+  <input id="trackId" type="hidden" value={{id}}>
+
+       </div>
+  <a class="home-link" href="/users/profile">BACK TO YOUR PROFILE</a>
+
+</body>
+</html>

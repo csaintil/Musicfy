@@ -1,7 +1,7 @@
 {
   "name": "musicfy",
   "version": "1.0.0",
-  "description": "![beer](http://i.imgur.com/EDTZyFL.jpg)",
+  "description": "",
   "main": "app.js",
   "dependencies": {
     "axios": "^0.17.1",

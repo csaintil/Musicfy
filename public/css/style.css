@@ -3,11 +3,14 @@
     padding: 0;
 }
 
-.main-container {
+.user_login_mainpage {
+background-color: yellow;
+}
+
+/*.main-container {
     width: 630px;
     margin: 0 auto;
     color: #000;
-    background: #fff;
     padding: 7px;
     border: 8px solid #000;
 }
@@ -88,4 +91,4 @@ ul li span.price {
 
 .container {
     display: inline-flex;
-}
+}*/

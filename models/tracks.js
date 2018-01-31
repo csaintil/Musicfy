@@ -18,7 +18,7 @@ tracks.create = (req, res, next) => {
       next();
     })
     .catch(error => {
-      console.log("error encountered in beers.create. Error:", error);
+      console.log("error encountered in tracks.create. Error:", error);
       next(error);
     });
 };
@@ -36,16 +36,28 @@ tracks.getAll = (req,res,next) => {
       next(error);
     });
 };
+tracks.findById = (req, res, next)=> {
+  db.one("SELECT*FROM tracks WHERE id = $1",
+    [req.params.id])
+  .then(data => {
+    res.locals.trackData = data;
+    next();
+  }) .catch(error => {
+      console.log("error encountered in tracks.getAll. Error:", error);
+      next(error);
+    });
+
+}
 
 
 tracks.destroy = (req, res, next) => {
   db
-    .none("DELETE FROM tracks WHERE id = $1", [req.params.beerId])
+    .none("DELETE FROM tracks WHERE id = $1", [req.params.id])
     .then(() => {
       next();
     })
     .catch(error => {
-      console.log("error encountered in beers.destroy. error:", error);
+      console.log("error encountered in tracks.destroy. error:", error);
       next(error);
     });
 };
@@ -53,6 +65,7 @@ tracks.destroy = (req, res, next) => {
 
 
 tracks.update = (req, res, next) => {
+  console.log('in update function')
   db
     .one(
       "UPDATE tracks SET artistName = $1, trackName = $2, country = $3, primaryGenreName = $4, price = $5 WHERE id = $6 RETURNING *;",
@@ -61,15 +74,16 @@ tracks.update = (req, res, next) => {
         req.body.trackName,
         req.body.country,
         req.body.primaryGenreName,
-        req.body.price
+        req.body.price,
+        req.params.trackId
       ]
     )
     .then(data => {
-      res.locals.trackData = data;
+      res.locals.upToDateTrackData = data;
       next();
     })
     .catch(error => {
-      console.log("error encountered in beers.create. Error:", error);
+      console.log("error encountered in tracks.create. Error:", error);
       next(error);
     });
 };

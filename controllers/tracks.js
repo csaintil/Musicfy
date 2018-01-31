@@ -9,17 +9,27 @@ tracksRouter.get('/saveSongs', tracks.getAll,(req,res)=> {
 })
 
 tracksRouter.get('/track', (req,res) => {
-  // console.log('we are int the newTrack html here' + "+++++++++++++++++++++++++++++++++++++");
-  // console.log(res.locals.searchData);
   res.render("tracks/track",res.locals.searchData);
 });
+
+tracksRouter.get('/track/:id', tracks.findById, (req, res, next) => {
+  res.render("artists/singleTrack", res.locals.trackData);
+})
+
 tracksRouter.post("/", tracks.create,(req, res, next)=> {
   res.json({id: res.locals.newtrackId, body: req.body})
 })
 
+tracksRouter.get("/track/:id/edit", tracks.findById, (req, res, next) => {
+    res.render("artists/singleTrack-edit", res.locals.trackData);
+});
 
-// tracksRouter.delete('/saveSongs', tracks.destroy, (req,res,next)=> {
-//   res.json(res.params.trackId)
-// })
+tracksRouter.delete('/track/:id', tracks.destroy, (req,res,next)=> {
+  res.json({ id: req.params.id})
+})
+
+tracksRouter.put("/track/:trackId", tracks.update, (req, res, next) => {
+    res.json(res.locals.upToDateTrackData);
+});
 
 module.exports = tracksRouter;
