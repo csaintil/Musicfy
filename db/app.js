@@ -5,8 +5,8 @@ const pgp = require('pg-promise')();
 const cn = {
     host: 'localhost',
     port: 5432,
-    database: 'musicfy',
-    user: student_35
+    database: 'musicfy'
+    // user: student_35
 };
 
 const db = pgp(process.env.DATABASE_URL || cn);

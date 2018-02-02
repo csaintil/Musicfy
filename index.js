@@ -31,7 +31,7 @@ app.use(morgan('dev'));
 // app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.listen(port, () => { console.log("Server started on " + PORT); });
+app.listen(PORT, () => { console.log("Server started on " + PORT); });
 
 
 

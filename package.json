@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
     "engines": {
-    "node": "v9.5.0" // put YOUR version of node here, in this format
+    "node": "9.5.0"
   },
   "dependencies": {
     "axios": "^0.17.1",
