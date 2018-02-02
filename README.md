@@ -22,7 +22,8 @@ Any other useful information about your app
     "mustache-express": "^1.2.4",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "pg-promise": "^5.9.7"`
+    "pg-promise": "^5.9.7",
+    "JsHint`
 
 #WIREFRAMES
 - When you launch the app you have only access to a search bar that display the tracks, artists and albums. The apps have a login page and a sign up page. If you are a new user, you will have to sign up to access additional feature such as creating,adding,deleting and updating.

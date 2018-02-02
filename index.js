@@ -59,7 +59,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 app.use('/users', require('./controllers/users'));
-// app.use('/artists', require('./controllers/artists'));
 app.use('/users', require('./controllers/artists'));
 
 app.use('/users', require('./controllers/tracks.js'));
@@ -76,53 +75,6 @@ app.use((err, req, res, next) => {
 	res.send(err);
 });
 
-
-
-
-
-
-// // require necessary top-level modules
-// const express = require("express");
-// const bodyParser = require("body-parser");
-// const mustacheExpress = require("mustache-express");
-// // const pgpromise = require("pg-promise");
-// // const housesRoutes = require("./controllers/houses.js");
-
-// // other constants
-// const port = 5000;
-// const app = express(); // the app object
-
-// // hook up body-parser
-// // parse application/x-www-form-urlencoded
-// app.use(bodyParser.urlencoded({ extended: false }));
-
-// // parse application/json
-// app.use(bodyParser.json());
-
-// // hook up mustache-express
-// // registers the template engine for use in res.render
-// app.engine("html", mustacheExpress());
-
-// //sets the file extension to use for views when the file extension is omitted
-// app.set("view engine", "html");
-
-// // sets the the directory that will contain our mustache template files, or "views"
-// app.set("views", __dirname + "/views");
-
-// // sets the directory that will contain our static 
-// app.use(express.static(__dirname + "/public"));
-
-// // Start listening!
-// app.listen(port, () => {
-//   console.log("Server started on " + port);
-// });
-
-// // hook it up to the app
-// app.get("/", (req, res, next) => {
-//   res.render("./home/homepage");
-// });
-
-// app.use('/artists', require('./controllers/artists'));
 
 
 

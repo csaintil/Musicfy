@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <main>  <b>Welcome to your profile, {{user.email}}</b>
+    <main> <b>Welcome to your profile, {{user.email}}</b>
         <div>
             <section>
                 <a href="../users/track">create</a>
@@ -28,21 +28,22 @@
         <div class="result">
             {{#searchData.results}}
             <div class="left"> Artist: {{artistName}} </div>
-            <center><div> Track: {{trackName}}</div></center>
-            <div  class="left"> Country: {{country}}</div>
+            <center>
+                <div> Track: {{trackName}}</div>
+            </center>
+            <div class="left"> Country: {{country}}</div>
             <div class="right"> Genre: {{primaryGenreName}}</div>
             <br />
             <div class="right"> Price: {{trackPrice}}</div>
-              <br />
-            <div class="apiImage"> <img  src="{{artworkUrl100}}" alt=""></div>
+            <br />
+            <div class="apiImage"> <img src="{{artworkUrl100}}" alt=""></div>
             <div>
-                  <br />
-                 <audio src="  {{previewUrl}}"></audio>
-                 <source src=" {{previewUrl}}">
-                  <!-- {{previewUrl}} -->
-                    
-
-                               </div>
+                <br />
+                <audio controls>
+                    <source src="{{previewUrl}}" type="audio/ogg">
+                    <source src="{{previewUrl}}" type="audio/mpeg">
+                </audio>
+            </div>
             {{/searchData.results}}
             </p>
         </div>

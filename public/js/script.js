@@ -15,13 +15,13 @@ $(document).ready(function() {
 
           getData(data);
         }
-      })
+      });
     };
 
     function getData(responseData){
   var song= responseData.results.forEach(function(albumData) {
   $(".homepage-container").append($("<div>").text(albumData.collectionName).addClass('friendly').css('background-image', 'url("' +albumData.artworkUrl100+ '")'))
-                })
+                });
       // appendToDom(song);
 
 }
@@ -50,16 +50,16 @@ $('#createTrack').submit(function(e){
        console.log("there is an error in the POST Ajax call", error);
       }
 
-    })
+    });
 
-  })
+  });
 
 
 
 
   $('#edit-track').submit(function(e){
     console.log('here');
-    const id = $('#singleTrackId').val()
+    const id = $('#singleTrackId').val();
     console.log(id);
 
     // preventing form from submitting
@@ -79,15 +79,15 @@ $('#createTrack').submit(function(e){
        // console.log(err);
       }
 
-    })
+    });
 
-  })
+  });
 
 
 
   $('#delete').click(function() {
   const id = $('#trackId').val();
-    console.log(id)
+    console.log(id);
  // return(alert);
 
   const confirm = window.confirm('Are you sure you want to delete this?');
@@ -101,10 +101,10 @@ $('#createTrack').submit(function(e){
 
 
       }
-    })
+    });
   }
 
-  })
+  });
 
 
 

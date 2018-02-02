@@ -1,4 +1,4 @@
-\c musicfy
+
 DROP TABLE IF EXISTS users_tracks;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS tracks;

@@ -3,8 +3,6 @@ const router = require('express').Router();
 const passport = require('passport');
 const artists = require('../models/artists.js');
 const tracks = require("../models/tracks.js");
-
-// const controller = require('./controller');
 const auth = require('../services/auth');
 
 // ----------------------------------------
@@ -90,10 +88,10 @@ router.post(
    tracks.create,
    (req, res) => {
     console.log(res.locals.trackData);
-   res.json({ id:  res.locals.trackData.id })
+   res.json({ id:  res.locals.trackData.id });
     // res.render("artists/songs", { trackData: res.locals.trackData })
    }
-)
+);
 
 
 router.put(
@@ -102,10 +100,9 @@ router.put(
    // User.findByEmailMiddleware,
    tracks.update,
    (req, res) => {
-    console.log(res.locals.trackData + "+++++++++++++++++++");
    res.send( {id: res.locals.upToDateTrackData});
    }
-)
+);
 
 router.delete(
     '/track/{{id}}', 
@@ -113,9 +110,9 @@ router.delete(
    User.findByEmailMiddleware,
    tracks.destroy,
    (req, res) => {
-    res.json({})
+    res.json({});
    }
-)
+);
 
 router.post(
     '/counter',
