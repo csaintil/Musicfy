@@ -1,45 +1,40 @@
-# Beer.
+Explanations of the technologies used
+Wireframes
+User Stories
+The approach taken
+Installation instructions (if needed)
+Unsolved problems
+Any other useful information about your app
 
-![beer](http://i.imgur.com/EDTZyFL.jpg)
+#MUSICFY
+- Musicfy is an app that use Itunes API to access tracks,albums,and artists. My app allows you to create, add, update and delete tracks you have created to the database. When you create a tracks you have the option the add the artist name, track name, price etc.. 
 
-### Setup
+#TECHNOLOGIES
+ - As for technologies, I used,  
 
-1. Create a database using the `createdb` utility:
+  `axios": "^0.17.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "morgan": "^1.9.0",
+    "mustache-express": "^1.2.4",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pg-promise": "^5.9.7"`
 
-    createdb auth_beer_list_lab.
+#WIREFRAMES
+- When you launch the app you have only access to a search bar that display the tracks, artists and albums. The apps have a login page and a sign up page. If you are a new user, you will have to sign up to access additional feature such as creating,adding,deleting and updating.
 
-1. Run the schema file:
+#USER
+- The goal behing this app was for the user to create, update and delete their own tracks. The user is able to search any tracks they are interested in.
 
-    psql -f db/schema.sql
+#Approach taken
+- My approach of the app, was to access the Itunes API using axios in the back end of the app and also used Ajax to access Itunes Api for the landing pages. I wanted to give the user the freedom to create their own track. The user have full control of the app. As for future features I want to add a favorite button, a sample  of the tracks they searched.
 
-1. Run the seeds file:
 
-    psql -f db/seed.sql
+#Intallation
+- As for installation, before you actually start the app, you need to run npm install.
 
-1. Check that your table was created and populated:
 
-`psql -d auth_beer_list_lab`
-
-`SELECT * FROM beers;`
-
-### Part 1
-
-We're going to add user login.
-
-Open the `express_auth_passport_bcrpt` project we presented this morning.
-
-1. Copy and paste the `services` directory from `express_auth_passport_bcrypt` into this project.
-
-1. Copy and paste the `users.js` controller file from `express_auth_passport_bcrypt` into this project's `controllers` directory.
-
-1. Copy and paste the `user.js` (note it's `user.js` rather than `users.js`!) into this project's `models` directory.
-
-1. Copy and paste the `views/users` directory from `express_auth_passport_bcrypt` into this project's `views` directory.
-
-1. Modify `index.js` to connect the pieces, using `index.js` in `express_auth_passport_bcrypt` as a guide. If successful, you should be able to navigate to `users/new` and create a new user.
-
-### If Something Goes Wrong Or You Find A Bug In The Starter Code
-
-Let me know.
-# Musicfy
-# Musicfy

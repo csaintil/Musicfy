@@ -4,31 +4,31 @@ const artists = require('../models/artists.js');
 const auth = require('../services/auth');
 
 
-tracksRouter.get('/saveSongs', tracks.getAll,(req,res)=> {
+tracksRouter.get('/saveSongs',auth.restrict, tracks.getAll,(req,res)=> {
   res.render('artists/saveSongs', { tracksData :res.locals.alltracksData})
 })
 
-tracksRouter.get('/track', (req,res) => {
+tracksRouter.get('/track',auth.restrict, (req,res) => {
   res.render("tracks/track",res.locals.searchData);
 });
 
-tracksRouter.get('/track/:id', tracks.findById, (req, res, next) => {
+tracksRouter.get('/track/:id', auth.restrict, tracks.findById, (req, res, next) => {
   res.render("artists/singleTrack", res.locals.trackData);
 })
 
-tracksRouter.post("/", tracks.create,(req, res, next)=> {
-  res.json({id: res.locals.newtrackId, body: req.body})
+tracksRouter.post("/",auth.restrict, tracks.create,(req, res, next)=> {
+  res.json({id: res.locals.newtrackId, body: req.body , user: req.user})
 })
 
-tracksRouter.get("/track/:id/edit", tracks.findById, (req, res, next) => {
+tracksRouter.get("/track/:id/edit",auth.restrict, tracks.findById, (req, res, next) => {
     res.render("artists/singleTrack-edit", res.locals.trackData);
 });
 
-tracksRouter.delete('/track/:id', tracks.destroy, (req,res,next)=> {
+tracksRouter.delete('/track/:id', auth.restrict, tracks.destroy, (req,res,next)=> {
   res.json({ id: req.params.id})
 })
 
-tracksRouter.put("/track/:trackId", tracks.update, (req, res, next) => {
+tracksRouter.put("/track/:trackId",auth.restrict, tracks.update, (req, res, next) => {
     res.json(res.locals.upToDateTrackData);
 });
 

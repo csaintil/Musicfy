@@ -20,8 +20,8 @@ CREATE TABLE tracks (
   trackName VARCHAR(255),
   country VARCHAR(255),
   primaryGenreName VARCHAR(255),
-  price INTEGER
-  -- user_id VARCHAR(255)
+  price INTEGER,
+  user_id INTEGER
   
 );
 

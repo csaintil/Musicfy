@@ -10,9 +10,10 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const app = express();
 const mustacheExpress = require('mustache-express');
+const dotenv = require("dotenv").config();
 
-const port = process.env.PORT || 8080;
 
+const PORT = process.env.PORT || 3000;
 
 // registers the template engine for use in res.render
 app.engine('html', mustacheExpress());
@@ -30,7 +31,7 @@ app.use(morgan('dev'));
 // app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.listen(port, () => { console.log("Server started on " + port); });
+app.listen(port, () => { console.log("Server started on " + PORT); });
 
 
 

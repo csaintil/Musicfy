@@ -5,18 +5,31 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>WELCOME</title>
   <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery.js"></script>
+    <script src="/js/script.js"></script>
 </head>
-<body>
+<body class="homepage-url">
   <main>  
     <h1>Welcome!</h1>
     <nav class="">
    <div class="user_login_mainpage">
-          <a href="/users/login">Login</a>
+          <a href="/users/login"><button>Login</button></a>
        
-          <a href="/users/new">Sign Up</a>
+          <a href="/users/new"><button>Sign Up</button></a>
+
     </div>
     </nav>
   
   </main>
+
+    <div class="homepage-container ">
+    <div class="search-container">
+      <label>search:</label>
+      <input type="text" id="search" />
+      <button id="homepage-submit">Search</button>
+    </div>
+    <div id="result friendly">
+    </div>
+  </div>
 </body>
 </html>

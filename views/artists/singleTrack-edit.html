@@ -1,54 +1,57 @@
 <!DOCTYPE html>
+<html class="apiResultbackgroundColor">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" type="text/css" href="/css/style.css" />
-  <title>Document</title>
-  <script src="/js/jquery.js"></script>
-  <script src="/js/script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <title>Document</title>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/script.js"></script>
 </head>
+
 <body>
-    <div class="main-container">
-      <h1>Edit</h1>
-
-      <form class="edit" id="edit-track" method="PUT" action="">
-        <div>
-          <label for="artistName">
-            artistName
-          </label>
-          <input id="artistName" name="artistName" type="text" value={{artistName}}>
-        </div>
-        <div>
-          <label for="trackName">
-              trackName
-          </label>
-          <input id="trackName" name="trackName" type="text" value={{trackName}}>
-        </div>
-        <div>
-          <label for="country">
-              Country
-          </label>
-          <input id="country" name="country" type="text" value="{{country}}">
-        </div>
-        <div>
-          <label for="genre">
-              genre
-          </label>
-          <input id="genre" name="genre" type="text" value="{{primaryGenreName}}">
-        </div>
-        <div>
-          <label for="price">
-              price
-          </label>
-
-          <input id="price" name="price" type="text" value="{{price}}">
-        </div>
-  <input id="singleTrackId" type="hidden" value={{id}}>
-
-        <input type="submit" value="submit">
-        <a class="home-link" href="/users/profile">BACK TO YOUR PROFILE</a>
-      </form>
+    <div class="main-container create-container">
+       
+        <form class="edit" id="edit-track" method="PUT" action="">
+         <h1 style="color: black">Edit</h1>
+           <img src="http://blackcommerce.org/eagleawards/wp-content/uploads/2014/03/divider-51.png" class="edit-divider">
+            <div>
+                <label for="artistName">
+                    artistName
+                </label>
+                <input id="artistName" name="artistName" type="text" value={{results.artistName}}>
+            </div>
+            <div>
+                <label for="trackName">
+                    trackName
+                </label>
+                <input id="trackName" name="trackName" type="text" value={{results.trackName}}>
+            </div>
+            <div>
+                <label for="country">
+                    Country
+                </label>
+                <input id="country" name="country" type="text" value="{{country}}">
+            </div>
+            <div>
+                <label for="genre">
+                    genre
+                </label>
+                <input id="genre" name="genre" type="text" value="{{{primaryGenreName}}}">
+            </div>
+            <div>
+                <label for="price">
+                    price
+                </label>
+                <input id="price" name="price" type="text" value="{{price}}">
+            </div>
+            <input id="singleTrackId" type="hidden" value={{id}}>
+            <input type="submit" value="submit">
+        </form>
     </div>
+                <a class="home-link" href="/users/profile">BACK TO YOUR PROFILE</a>
+
 </body>
+
 </html>

@@ -6,10 +6,7 @@ const artists = {};
 
 
 
-artists.all = (req, res, next) => {
-  // const input = req.query.term;
-  
-    // console.log(req.params.artistName + "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+artists.all = (req, res, next) => { 
  const artistName = req.query.artistName;
   axios({
     method: "GET",
@@ -17,11 +14,10 @@ artists.all = (req, res, next) => {
   })
     .then(response => {
       res.locals.searchData = response.data;
-      // console.log(res.locals.searchData + "++++++++++++++++++++++++++++++++++++++++++++++++++++++");
       next();
     })
     .catch(err => {
-      console.log("error encountered in Trains.showTrain. error: ", err);
+      console.log("error encountered in artits.all error: ", err);
     });
 };
 

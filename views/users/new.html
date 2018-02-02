@@ -4,17 +4,23 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Sign Up</title>
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery.js"></script>
+    <script src="/js/script.js"></script>
 </head>
-<body>
+<body class="signUpBcg">
   <main>
-    <section>
-      <form action="/users" method="POST">
+    <section  >
+      <div class="homepage-container2">
+         <img src="/css/images.png" alt="">
+
+      <form action="/users" method="POST" class="section">
         <label for="email">Email</label><br>
         <input id="email" type="text" name="user[email]" placeholder="john.doe@example.com"><br>
         <label for="password">Password</label><br>
         <input id="password" type="password" name="user[password]" placeholder="P4ssw0rd1234"><br>
         <input type="submit" value="Sign Up">
+      </div>
       </form>
     </section>
   </main>

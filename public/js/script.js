@@ -1,18 +1,33 @@
 $(document).ready(function() {
-    // console.log('loading up');
-    // const $userDataCounterButton = $('#user-data-counter-button');
-    // $userDataCounterButton.click((e) => {
-    //   e.preventDefault();
-    //   $.ajax({
-    //     url: "counter",
-    //     type: "POST"
-    //   })
-    //   .done(function(data){
-    //     console.log('done with ajax, data: ', data);
-    //     const $userDataCounter = $('#user-data-counter');
-    //     $userDataCounter.text(data.counter);
-    //   });
-    // });
+ $("#homepage-submit").on("click", function(event) {
+    var input = $("#search").val();
+    // console.log(input);
+    makeCall(input);
+  });
+
+  function makeCall(input) {
+    $.ajax( {
+      method:"GET",
+      url: `https://itunes.apple.com/search?term=${input}&limit=5`,
+       dataType: "JSONP",
+        success: function(data) {
+          console.log(data), 
+
+          getData(data);
+        }
+      })
+    };
+
+    function getData(responseData){
+  var song= responseData.results.forEach(function(albumData) {
+  $(".homepage-container").append($("<div>").text(albumData.collectionName).addClass('friendly').css('background-image', 'url("' +albumData.artworkUrl100+ '")'))
+                })
+      // appendToDom(song);
+
+}
+function appendToDom(song) {
+      $(".homepage-container").append($("<div>").text(`result : ${song}`));
+}
 
 
 
@@ -32,55 +47,12 @@ $('#createTrack').submit(function(e){
         window.location.href = `/users/track/${data.id}`;
       }, 
       error: function(xhr, status, error) {
-       // console.log(err);
+       console.log("there is an error in the POST Ajax call", error);
       }
 
     })
 
   })
-
-//   $('#edit-track').submit(function(e){
-//     console.log('here');
-//     const id = $('#singleTrackId').val()
-//     console.log(id);
-
-//     // preventing form from submitting
-//     e.preventDefault();
-//     // grabbing form data by storing it in an object
-//     const artist = $('#artistName').val(),
-//     track = $('#trackName').val(), 
-//     country = $('#country').val(), 
-//     genre = $('#genre').val(),
-//     price = $('#price').val()
-//     // const data = $(this).serialize();
-//     // console.log(data); 
-
-//     const uptodateTrack = {
-//       artistName: artist,
-//       trackName:track,
-//       country: country,
-//       primaryGenreName: genre,
-//       price: price
-
-//     }
-// console.log(uptodateTrack);
-
-//     $.ajax({
-//       url: `/users/track/${id}`,
-//       data: uptodateTrack,
-//       type: 'PUT',
-//       success: function(data) {
-//         console.log(' from put response  ', uptodateTrack , "+++++++++++++++++++++++++++++++++++++++++++++++");
-//         window.location.href = `/users/track/${data.id}`;
-//       }, 
-//       error: function(xhr, status, error) {
-//        console.log("wrong ", error);
-//       }
-
-//     })
-
-//   })
-
 
 
 

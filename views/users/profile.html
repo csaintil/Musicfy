@@ -1,56 +1,52 @@
- <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html class="apiResultbackgroundColor">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>User Profile</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="/css/style.css">
     <script src="/js/jquery.js"></script>
     <script src="/js/script.js"></script>
 </head>
 
 <body>
-
-    <main>
-        <section>
-        <a href="../users/track">create</a>
-        <a href="../users/saveSongs">edit/delete</a>
-
-
-
-            Welcome to your profile, {{user.email}}
-            <div>
+    <main>  <b>Welcome to your profile, {{user.email}}</b>
+        <div>
+            <section>
+                <a href="../users/track">create</a>
+                <a href="../users/saveSongs">edit/delete</a>
                 <a href="/users/logout">Logout </a>
-            </div>
-            <p id="user-data-counter">{{user.counter}}</p>
-            <button id="user-data-counter-button">INCREMENT THE THING!!! NOW AND FOREVER</button>
+        </div>
         </section>
     </main>
-
-            <form method="GET" action="/users/viewArtist">
-                <input name = "artistName" type="text">
-                <button type="submit">search </button>
-            </form>
-
-
-
-  <div class="result">
-    <p>
-             {{#results}}
+    <form method="GET" class="search-container" action="/users/viewArtist">
+        <input name="artistName" type="text">
+        <button type="submit">search </button>
+    </form>
+    <div style="center">
+        <div class="result">
+            {{#searchData.results}}
+            <div class="left"> Artist: {{artistName}} </div>
+            <center><div> Track: {{trackName}}</div></center>
+            <div  class="left"> Country: {{country}}</div>
+            <div class="right"> Genre: {{primaryGenreName}}</div>
+            <br />
+            <div class="right"> Price: {{trackPrice}}</div>
+              <br />
+            <div class="apiImage"> <img  src="{{artworkUrl100}}" alt=""></div>
+            <div>
+                  <br />
+                 <audio src="  {{previewUrl}}"></audio>
+                 <source src=" {{previewUrl}}">
+                  <!-- {{previewUrl}} -->
                     
-                     {{trackName}}    {{artistName}}
-                    {{country}}
-                    {{primaryGenreName}}
-                     {{price}}
-                    <img src="{{artworkUrl100}}" alt="">
-                   
-               
-                {{/results}}
+
+                               </div>
+            {{/searchData.results}}
             </p>
- </div>
-
-
+        </div>
+    </div>
 </body>
 
 </html>

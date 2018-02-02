@@ -10,7 +10,8 @@ tracks.create = (req, res, next) => {
         req.body.trackName,
         req.body.country,
         req.body.primaryGenreName,
-        req.body.price
+        req.body.price,
+         req.user
       ]
     )
     .then(data => {

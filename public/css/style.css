@@ -1,94 +1,166 @@
 * {
-    margin: 0;
-    padding: 0;
+    font-family: sans-serif;
+    color: #c0b283;
+    font-size: 15px;
 }
 
-.user_login_mainpage {
-background-color: yellow;
-}
-
-/*.main-container {
-    width: 630px;
+body,
+html {
     margin: 0 auto;
-    color: #000;
-    padding: 7px;
-    border: 8px solid #000;
-}
-
-.border-container {
-    border: 2px dashed #000;
+    text-align: center;
 }
 
 h1 {
-    font-family: "Rye", "Georgia", serif;
-    text-align: center;
-    margin: 60px 60px 0 60px;
-    font-size: 60px;
-    text-transform: uppercase;
-    color: #000;
+    color: white;
+    font-size: 4em;
+    font-weight: light;
 }
 
-.divider {
+.homepage-url {
+    background-image: url(sound.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.homepage-container {
+    background-color: #2f3131;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    min-height: 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .3);
+}
+
+.homepage-container2 {
+    min-height: 100px;
+    border-radius: 40px;
+    box-shadow: 0 0 30px;
+    background-color: #2f3131;
+    max-width: 398px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 50px;
+}
+
+.signUpBcg {
+    background-image: url(headphonesbcg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.search-container {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+}
+
+input,
+button {
+    font-size: 1em;
+    padding: 7px;
+    margin: 0 0 0 10px;
+    border: 1px solid darkslateblue;
+    border-radius: 5px;
+}
+
+button {
+    background-color: aliceblue;
+}
+
+button:hover {
+    background-color: gold;
+}
+
+h1 {
+    color: white;
+}
+
+.apiResultbackgroundColor {
+    background-color: #050101;
+}
+
+.friendly {
+    background-repeat: no-repeat;
+    height: 100px;
+    /*display: inline;*/
+    cursor: pointer;
+}
+
+.friendly:hover {
+    transform: rotate(0.5deg);
+}
+
+.section {
+
+    min-height: 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.apiImage {
+    /*height: 100px; */
+    width: 150;
+    /*margin-top: -10px;*/
+}
+
+.create-container {
+    width: 630px;
+    margin: 0 auto;
+    /*color: #000;*/
+    color: #c0b283;
+    background: #fff;
+    padding: 7px;
+    border: 8px solid;
+    margin-top: 169px;
+}
+
+.edit-divider {
     height: 100px;
     display: block;
     width: 80%;
     margin: 0 auto;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0 0 40px 130px;
-    width: 593px;
+#submit:hover {
+    color: gold;
+    cursor: pointer;
 }
 
-ul li {
-    margin: 12px 0;
-}
-
-ul li span.name {
-    display: inline-block;
-    font-size: 25px;
-    text-transform: uppercase;
-    font-family: "Times New Roman", sans-serif;
-    margin-right: 20px;
-}
-
-.description {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    font-style: italic;
-    text-transform: none;
-    color: #6f7273;
-    font-size: 16pt;
-    margin: 16px auto;
-}
-
-ul li span.description {
-    text-align: left;
-    font-size: 15px;
-    margin: 12px 0;
-}
-
-.price {
-    font-family: "Helvetica", "Arial", sans-serif;
-    text-align: center;
-    margin: 20pt auto;
-    font-size: 20pt;
-}
-
-ul li span.price {
-    text-align: left;
-    font-family: "Helvetica", "Arial", sans-serif;
-    font-size: 20px;
-}
-
-.home-link {
-  text-align: center;
-  display: block;
-  margin: 20pt auto;
-}
-
-.container {
+.userCreation-container {
     display: inline-flex;
-}*/
+}
+
+.dot {
+
+    border: black;
+    border-top: 2px dotted black;
+    border-bottom: 1px solid;
+    padding-right: 400px;
+}
+
+.saveSongColor {
+    color: black;
+}

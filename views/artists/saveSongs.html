@@ -1,29 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html class="apiResultbackgroundColor">
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title></title>
- <link rel="stylesheet" href="style.css">
-   <script src="/js/jquery.js"></script>
-  <script src="/js/script.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery.js"></script>
+    <script src="/js/script.js"></script>
 </head>
-<body>
-  <h1>Own Creation</h1>
-     <div>   {{#tracksData}}           
-<a href="track/{{id}}">
-        <p> Artist: {{artistname}}<p>
-                    <p> Track :{{trackname}}</p>
-                    <p> Country: {{country}}</p>
-                    <p> Genre: {{primarygenrename}}</p>
-                    <p> Price: {{price}}</p>
-          <!--           <button id="edit">edit</button>
-                    <button id="delete">delete</button> --></a>
-<input id="track-id" type="hidden" value="">
 
-                    {{/tracksData}}
-                </div>
+<body class="userCreation-container">
+    <div class="userCreation">
+        <h1>Own Creation</h1> {{user.email}}
+        <div class="create-container">
+            {{#tracksData}}
+            <a href="track/{{id}}">
+                <div class="saveSongColor"> Artist: {{artistname}}</div>
+                <div class="saveSongColor"> Track : {{trackname}}</div>
+                <div class="saveSongColor"> Country: {{country}}</div>
+                <div class="saveSongColor"> Genre: {{primarygenrename}}</div>
+                <div class="saveSongColor"> Price: {{price}}</div>
+                                <div class="dot"></div>
 
+                <input id="track-id" type="hidden" value=""> {{/tracksData}}
 
+        </div>
+    </div>
 </body>
+
 </html>
